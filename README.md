@@ -9,6 +9,7 @@
 * HTML 5
 * CSS 3
 * PHP 7.4
+* MySQL 8.0
 
-## Setup:
-##### 
+## Setup
+##### To run this project, download it and then upload it to any web server. The website itself can also be seen at GitHub Page: https://czaroun.github.io/form-for-coordinators/
