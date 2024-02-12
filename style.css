@@ -1,0 +1,113 @@
+* {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+body {
+    
+    background-image: url(gradient.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main {
+    text-align: center;
+    margin: 2%;
+    font-size: 80%;
+    height: 100%;
+}
+h1 {
+    color: black;
+    font-size: 4.5em;
+    font-weight: bold;
+    font-style: italic;
+}
+form {
+    margin: 3% 0;
+}
+p, label {
+    font-size: 2.2em;
+    color: black;
+}
+input, select {
+    font-size: 1.5em;
+    border: 2px  ;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 0.1% 0.4%;
+    box-sizing: border-box;
+    outline: none;
+}
+input[type="date"] {
+    padding: 0 0.8%;
+}
+input[type="time"] {
+    padding: 0 3%;
+}
+input[name="teachers_tg"]::placeholder {
+    font-size: 55%;
+}
+input[name="prof"]::placeholder {
+    font-size: 90%;
+}
+input[name="con"]::placeholder {
+    font-size: 85%;
+}
+input:focus {
+    color: #FF983C;
+    outline: none;
+    border: 2px solid #FF983C;
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(214,41,164,0.39); 
+    box-shadow: 0px 0px 10px 2px rgba(214,41,164,0.39);
+}
+#tg {
+    color: black;
+    font-size:1.4em;
+    padding-right: 1%;
+}
+input[type="radio"] {
+    transform: scale(1.5);
+}
+button {
+    font-size: 1.7em;
+    padding: 3% 0.5%;
+    padding:  0.5%;
+    background-color: #FF7100;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    outline: none;
+    margin-top: 20px;
+}
+button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #FF5500;
+}
+button:focus {
+    outline: none;
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(214,41,164,0.39); 
+    box-shadow: 0px 0px 10px 2px rgba(214,41,164,0.39);
+}
+.php {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    font-size: 250%;
+    height: 100%;
+    
+}
+.languages {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.languages img {
+    width: 100px;
+    height: auto;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.languages img:hover {
+    opacity: 0.7;
+}
