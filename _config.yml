@@ -1,0 +1,14 @@
+# Nazwa strony
+title: Moja Strona
+
+# Opis strony
+description: To jest opis mojej strony.
+
+# Ustawienia adresu URL (opcjonalne)
+url: "https://moja-strona.github.io"
+
+# Ustawienia języka
+lang: pl
+
+# Konfiguracja głównej strony
+home: coordinator_form_pl.html
