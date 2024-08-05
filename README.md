@@ -12,4 +12,4 @@ The project was implemented using:
 * MySQL 8.0
 
 ## Setup
-To run this project, download it and then upload it to any web server. The website itself can also be seen at GitHub Page: https://czaroun.github.io/form-for-coordinators/
+To run this project, download it and then upload it to any web server. The website itself can also be seen at GitHub Page: https://krystianbeduch.github.io/form-for-coordinators/
