@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Form for coordinators</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main">
+            <div class="languages">
+                <a href="index.html"><img src="flag_polish.png" alt="Polski"></a>
+                <a href="index_en.html"><img src="flag_english.png" alt="English"></a>
+            </div>
+            <h1>Form for coordinators</h1>
+            <form method="post" action="form_en.php" enctype="multipart/form-data">
+                <label>Name and surname of the coordinator</label><br><input type="text" name="data" required><br>
+                <label>Arrival date</label><br><input type="date" name="ar_date" required><br>
+                <label>Departure date</label><br><input type="date" name="de_date" required><br>
+                <label>Name of school/group</label><br><input type="text" name="group" required><br>
+                <label>Type of visit</label><br><input type="text" name="type_of_visit" required><br>
+                <label>Arrival flight number</label><br><input type="text" name="ar_flight" required><br>
+                <label>Arrival flight time</label><br><input type="time" name="ar_flight_time" required><br>
+                <label>Deparute flight number</label><br><input type="text" name="de_flight" required><br>
+                <label>Departure flight time</label><br><input type="time" name="de_flight_time" required><br>
+                <label>Number of people</label><br><input type="number" name="people" min="0" required><br>
+                <label>Number of boys</label><br><input type="number" name="boys" min="0" required><br>
+                <label>Number of girls</label><br><input type="number" name="girls" min="0" required><br>
+                <label>Number of caregivers/teachers</label><br><input type="number" name="teachers" min="0" required><br>
+                <label>Number of caregivers/teachers - men</label><br><input type="number" name="teachers_men" min="0" required><br>                
+                <label>Number of caregivers/teachers - women</label><br><input type="number" name="teachers_women" min="0" required><br>
+                <label>Can any caregivers/teachers be in the room together?</label><br><input type="radio" name="teachers_together" value="No"><span id="tg">No<input type="radio" name="teachers_together" value="Yes">Yes</span><input type="text" name="teachers_tg" placeholder="In what configuration e.g. 1 woman + 1 man"><br>                
+                <label>Trips</label><br><input type="text" name="trips" required><br>
+                <label>Profession + number of people for each profession</label><br><input type="text" name="prof" placeholder="e.g. Informatics - 10 people" required><br>
+                <label>Contact<br></label>
+                <select name="contact">
+                    <option value="telefon">Phone</option>
+                    <option value="email">Email</option>
+                    <option value="facebook">Facebook/Messenger</option>
+                    <option value="whatsapp">WhatsApp</option>
+                </select><br>
+                <input type="text" name="con" placeholder="phone/email/link to fb" required>
+                <br><br>
+                <button type="submit">Submit</button>
+            </form>
+            <br>
+            <br>
+        </div>
+    </body>
+</html>
