@@ -1,8 +1,8 @@
 # Form for coordinators
-A project implemented during internship in Portugal. In this task, the goal was to create a tool through which internship coordinators will be able to send applications.
+The project was done during internship in Portugal. The purpose of this task was to create a tool that would allow which internship coordinators to send applications.
 
 ## General Info
-A simple form thanks to which main clients (practice coordinators) will be able to send all the necessary information as the number of participants, arrival/departure date, flight numbers etc.
+The practice coordianators will be able to send all the necessary information, such as the number of participants, arrival/departure date, flight numbers, etc., through a simple form.
 
 ## Technologies
 The project was implemented using:
