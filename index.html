@@ -1,110 +1,108 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Formularz dla koorydynatorów</title>
+        <title>Form for coordinators</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" >
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
         <script src="script.js"></script>
     </head>
 
     <body>
         <main>
             <div class="languages">
-                <a href="index.html"><img src="flag_polish.png" alt="Polski"></a>
-                <a href="index_en.html"><img src="flag_english.png" alt="English"></a>
+                <a href="../form-for-coordinators/" class="home-link"><img src="flag_english.png" alt="English"></a>
+                <a href="index_pl.html"><img src="flag_polish.png" alt="Polski"></a>
             </div>
-            <h1>Formularz dla koordynatorów</h1>
+            <h1>Form for coordinators</h1>
             <form method="post" action="form.php" enctype="multipart/form-data">
-                <input type="hidden" name="language" value="true">
+                <input type="hidden" name="language" value="false">
 
-                <label for="first_name">Imię koordynatora</label>
+                <label for="first_name">Coordinator's first name</label>
                 <input type="text" name="first_name" id="first_name" required>
 
-                <label for="last_name">Nazwisko koordynatora</label>
+                <label for="last_name">Coordinator's last name</label>
                 <input type="text" name="last_name" id="last_name" required>
 
-                <label for="ar_date">Data przybycia</label>
+                <label for="ar_date">Arrival date</label>
                 <input type="date" name="ar_date" id="ar_date" required>
 
-                <label for="de_date">Data wyjazdu</label>
+                <label for="de_date">Departure date</label>
                 <input type="date" name="de_date" id="de_date" required>
 
-                <label for="group">Nazwa szkoła/grupy</label>
+                <label for="group">Name of school/group</label>
                 <input type="text" name="group" id="group" required>
 
-                <label for="type_of_visit">Rodzaj pobytu</label>
+                <label for="type_of_visit">Type of visit</label>
                 <input type="text" name="type_of_visit" id="type_of_visit" required>
 
-                <label for="ar_flight">Numer lotu przyjazdowego</label>
+                <label for="ar_flight">Arrival flight number</label>
                 <input type="text" name="ar_flight" id="ar_flight" required>
 
-                <label for="ar_flight_time">Godzina lotu przyjazdowego</label>
+                <label for="ar_flight_time">Arrival flight time</label>
                 <input type="time" name="ar_flight_time" id="ar_flight_time" required>
 
-                <label for="de_flight">Numer lotu wyjazdowego</label>
+                <label for="de_flight">Deparute flight number</label>
                 <input type="text" name="de_flight" id="de_flight" required>
 
-                <label for="de_flight_time">Godzina lotu wyjazdowego</label>
+                <label for="de_flight_time">Departure flight time</label>
                 <input type="time" name="de_flight_time" id="de_flight_time" required>
 
-                <label for="people">Liczba osób</label>
+                <label for="people">Number of people</label>
                 <input type="number" name="people" id="people" min="1" required>
 
-                <label for="boys">Liczba chłopców</label>
+                <label for="boys">Number of boys</label>
                 <input type="number" name="boys" id="boys" min="0" required>
 
-                <label for="girls">Liczba dziewczyn</label>
+                <label for="girls">Number of girls</label>
                 <input type="number" name="girls" id="girls" min="0" required>
 
-                <label for="teachers">Liczba opiekunów/nauczycieli</label>
+                <label for="teachers">Number of caregivers/teachers</label>
                 <input type="number" name="teachers" id="teachers" min="1" required>
 
-                <label for="teachers_men">Liczba opiekunów/nauczycieli - mężczyźni</label>
+                <label for="teachers_men">Number of caregivers/teachers - men</label>
                 <input type="number" name="teachers_men" id="teachers_men" min="0" required>
 
-                <label for="teachers_women">Liczba opiekunów/nauczycieli - kobiety</label>
+                <label for="teachers_women">Number of caregivers/teachers - women</label>
                 <input type="number" name="teachers_women" id="teachers_women" min="0" required>
 
-                <label for="teachers_tg">Czy jacyś opiekunowie/nauczyciele mogą być razem w pokoju?</label>
+                <label for="teachers_tg">Can any caregivers/teachers be in the room together?</label>
                 <div class="radio-group">
-                    <input type="radio" id="teachers_together_no" name="teachers_together" value="Nie" onclick="toggleInput()" required>
-                    <label for="teachers_together_no">Nie</label>
+                    <input type="radio" id="teachers_together_no" name="teachers_together" value="No" onclick="toggleInput()" required>
+                    <label for="teachers_together_no">No</label>
 
-                    <input type="radio" id="teachers_together_yes" name="teachers_together" value="Tak" onclick="toggleInput()">
-                    <label for="teachers_together_yes">Tak</label>
+                    <input type="radio" id="teachers_together_yes" name="teachers_together" value="Yes" onclick="toggleInput()">
+                    <label for="teachers_together_yes">Yes</label>
                 </div>
 
-                <input type="text" name="teachers_tg" id="teachers_tg" placeholder="W jakiej konfiguracji np. 1 kobieta + 1 mężczyzna" style="display: none;">
+                <input type="text" name="teachers_tg" id="teachers_tg" placeholder="In what configuration e.g. 1 woman + 1 man" style="display: none;">
 
-
-                <label for="trips">Wycieczki</label>
+                <label for="trips">Trips</label>
                 <input type="text" name="trips" id="trips" required>
 
-                <label for="prof">Kierunki + liczba osób na poszczególne kierunki</label>
-                <input type="text" name="prof" id="prof" placeholder="np. Informatycy - 10 osób" required>
+                <label for="prof">Profession + number of people for each profession</label>
+                <input type="text" name="prof" id="prof" placeholder="e.g. Informatics - 10 people" required>
 
-
-                <label for="contact">Rodzaj kontaktu</label>
+                <label for="contact">Type of contact<br></label>
                 <select name="contact" id="contact">
-                    <option value="telefon">Telefon</option>
+                    <option value="phone">Phone</option>
                     <option value="email">Email</option>
                     <option value="facebook">Facebook/Messenger</option>
                     <option value="whatsapp">WhatsApp</option>
                 </select>
-                <label for="con">Kontakt</label>
-                <input type="text" name="con" id="con" placeholder="telefon/email/link do fb" required>
+                <label for="con">Contact</label>
+                <input type="text" name="con" id="con" placeholder="phone/email/link to fb" required>
 
-                <button type="submit">Wyślij</button>           
+                <button type="submit">Submit</button>
             </form>
             <footer>
-            <p>
-                © <a href="/" class="portfolio-link">Krystian Będuch</a><br>
-                Utworzono: Wrzesień 2021<br>
-                Ostatnia aktualizacja: Listopad 2024
-            </p>
+                <p>
+                    © <a href="/" class="portfolio-link">Krystian Będuch</a><br>
+                    Created at: September 2021<br>
+                    Last modify at: November 2024
+                </p>
             </footer>
         </main>
     </body>
