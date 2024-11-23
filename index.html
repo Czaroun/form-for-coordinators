@@ -7,23 +7,11 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" >
+        <script src="script.js"></script>
     </head>
 
-    <script>
-        function toggleInput() {
-            const teachersTogetherYes = document.getElementById("teachers_together_yes").checked;
-            const teachersTgInput = document.getElementById("teachers_tg");
-            if (teachersTogetherYes) {
-                teachersTgInput.style.display = "block";
-            }
-            else {
-                teachersTgInput.style.display = "none";
-            }
-        }
-    </script>
-
     <body>
-        <div class="main">
+        <main>
             <div class="languages">
                 <a href="index.html"><img src="flag_polish.png" alt="Polski"></a>
                 <a href="index_en.html"><img src="flag_english.png" alt="English"></a>
@@ -111,6 +99,13 @@
 
                 <button type="submit">Wyślij</button>           
             </form>
-        </div>
+            <footer>
+            <p>
+                © <a href="/" class="portfolio-link">Krystian Będuch</a><br>
+                Utworzono: Wrzesień 2021<br>
+                Ostatnia aktualizacja: Listopad 2024
+            </p>
+            </footer>
+        </main>
     </body>
 </html>
