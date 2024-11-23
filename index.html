@@ -8,6 +8,20 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" >
     </head>
+
+    <script>
+        function toggleInput() {
+            const teachersTogetherYes = document.getElementById("teachers_together_yes").checked;
+            const teachersTgInput = document.getElementById("teachers_tg");
+            if (teachersTogetherYes) {
+                teachersTgInput.style.display = "block";
+            }
+            else {
+                teachersTgInput.style.display = "none";
+            }
+        }
+    </script>
+
     <body>
         <div class="main">
             <div class="languages">
@@ -15,38 +29,88 @@
                 <a href="index_en.html"><img src="flag_english.png" alt="English"></a>
             </div>
             <h1>Formularz dla koordynatorów</h1>
-            <form method="post" action="form_pl.php" enctype="multipart/form-data">
-                <label>Imię i nazwisko koordynatora</label><br><input type="text" name="data" required><br>
-                <label>Data przybycia</label><br><input type="date" name="ar_date" required><br>
-                <label>Data wyjazdu</label><br><input type="date" name="de_date" required><br>
-                <label>Nazwa szkoła/grupy</label><br><input type="text" name="group" required><br>
-                <label>Rodzaj pobytu</label><br><input type="text" name="type_of_visit" required><br>
-                <label>Numer lotu przyjazdowego</label><br><input type="text" name="ar_flight" required><br>
-                <label>Godzina lotu przyjazdowego</label><br><input type="time" name="ar_flight_time" required><br>
-                <label>Numer lotu wyjazdowego</label><br><input type="text" name="de_flight" required><br>
-                <label>Godzina lotu wyjazdowego</label><br><input type="time" name="de_flight_time" required><br>
-                <label>Liczba osób</label><br><input type="number" name="people" min="0" required><br>
-                <label>Liczba chłopców</label><br><input type="number" name="boys" min="0" required><br>
-                <label>Liczba dziewczyn</label><br><input type="number" name="girls" min="0" required><br>
-                <label>Liczba opiekunów</label><br><input type="number" name="teachers" min="0" required><br>
-                <label>Liczba opiekunów - mężczyźni</label><br><input type="number" name="teachers_men" min="0" required><br>                
-                <label>Liczba opiekunów - kobiety</label><br><input type="number" name="teachers_women" min="0" required><br>              
-                <label>Czy jacyś opiekunowie mogą być razem w pokoju?</label><br><input type="radio" name="teachers_together" value="Nie"><span id="tg">Nie<input type="radio" name="teachers_together" value="Tak">Tak</span><input type="text" name="teachers_tg" placeholder="W jakiej konfiguracji np. 1 kobieta + 1 mężczyzna"><br>                
-                <label>Wycieczki</label><br><input type="text" name="trips" required><br>
-                <label>Kierunki + liczba osób na poszczególne kierunki</label><br><input type="text" name="prof" placeholder="np. Informatycy - 10 osób" required><br>
-                <label>Kontakt<br></label>
-                <select name="contact">
+            <form method="post" action="form.php" enctype="multipart/form-data">
+                <input type="hidden" name="language" value="true">
+
+                <label for="first_name">Imię koordynatora</label>
+                <input type="text" name="first_name" id="first_name" required>
+
+                <label for="last_name">Nazwisko koordynatora</label>
+                <input type="text" name="last_name" id="last_name" required>
+
+                <label for="ar_date">Data przybycia</label>
+                <input type="date" name="ar_date" id="ar_date" required>
+
+                <label for="de_date">Data wyjazdu</label>
+                <input type="date" name="de_date" id="de_date" required>
+
+                <label for="group">Nazwa szkoła/grupy</label>
+                <input type="text" name="group" id="group" required>
+
+                <label for="type_of_visit">Rodzaj pobytu</label>
+                <input type="text" name="type_of_visit" id="type_of_visit" required>
+
+                <label for="ar_flight">Numer lotu przyjazdowego</label>
+                <input type="text" name="ar_flight" id="ar_flight" required>
+
+                <label for="ar_flight_time">Godzina lotu przyjazdowego</label>
+                <input type="time" name="ar_flight_time" id="ar_flight_time" required>
+
+                <label for="de_flight">Numer lotu wyjazdowego</label>
+                <input type="text" name="de_flight" id="de_flight" required>
+
+                <label for="de_flight_time">Godzina lotu wyjazdowego</label>
+                <input type="time" name="de_flight_time" id="de_flight_time" required>
+
+                <label for="people">Liczba osób</label>
+                <input type="number" name="people" id="people" min="1" required>
+
+                <label for="boys">Liczba chłopców</label>
+                <input type="number" name="boys" id="boys" min="0" required>
+
+                <label for="girls">Liczba dziewczyn</label>
+                <input type="number" name="girls" id="girls" min="0" required>
+
+                <label for="teachers">Liczba opiekunów/nauczycieli</label>
+                <input type="number" name="teachers" id="teachers" min="1" required>
+
+                <label for="teachers_men">Liczba opiekunów/nauczycieli - mężczyźni</label>
+                <input type="number" name="teachers_men" id="teachers_men" min="0" required>
+
+                <label for="teachers_women">Liczba opiekunów/nauczycieli - kobiety</label>
+                <input type="number" name="teachers_women" id="teachers_women" min="0" required>
+
+                <label for="teachers_tg">Czy jacyś opiekunowie/nauczyciele mogą być razem w pokoju?</label>
+                <div class="radio-group">
+                    <input type="radio" id="teachers_together_no" name="teachers_together" value="Nie" onclick="toggleInput()" required>
+                    <label for="teachers_together_no">Nie</label>
+
+                    <input type="radio" id="teachers_together_yes" name="teachers_together" value="Tak" onclick="toggleInput()">
+                    <label for="teachers_together_yes">Tak</label>
+                </div>
+
+                <input type="text" name="teachers_tg" id="teachers_tg" placeholder="W jakiej konfiguracji np. 1 kobieta + 1 mężczyzna" style="display: none;">
+
+
+                <label for="trips">Wycieczki</label>
+                <input type="text" name="trips" id="trips" required>
+
+                <label for="prof">Kierunki + liczba osób na poszczególne kierunki</label>
+                <input type="text" name="prof" id="prof" placeholder="np. Informatycy - 10 osób" required>
+
+
+                <label for="contact">Rodzaj kontaktu</label>
+                <select name="contact" id="contact">
                     <option value="telefon">Telefon</option>
                     <option value="email">Email</option>
                     <option value="facebook">Facebook/Messenger</option>
                     <option value="whatsapp">WhatsApp</option>
-                </select><br>
-                <input type="text" name="con" placeholder="telefon/email/link do fb" required>
-                <br><br>
+                </select>
+                <label for="con">Kontakt</label>
+                <input type="text" name="con" id="con" placeholder="telefon/email/link do fb" required>
+
                 <button type="submit">Wyślij</button>           
             </form>
-            <br>
-            <br>
         </div>
     </body>
 </html>
